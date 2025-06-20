@@ -1,0 +1,13 @@
+<div class="subcategories-container">
+  <div class="overlay">
+    <h2 class="title">{{ categoryName }}</h2>
+    <div class="grid">
+      <div class="card" *ngFor="let sub of subcategories" (click)="goToItem(sub.name)">
+        <img [src]="sub.imageUrl" alt="{{ sub.name }}" class="card-image">
+        <div class="card-content">
+          <p class="card-title">{{ sub.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

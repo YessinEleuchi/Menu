@@ -1,0 +1,102 @@
+.home-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #4a2c2a;
+}
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  z-index: 4; /* Ensure it’s above other elements */
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  filter: brightness(0.9);
+}
+
+.overlay {
+  position: absolute;
+  background: linear-gradient(to right, rgba(245, 245, 220, 0.7), rgba(139, 69, 19, 0.2));
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.title {
+  position: relative;
+  z-index: 3;
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: -100px; /* Moves title higher, adjust as needed */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.candle-container {
+  position: relative;
+  z-index: 3;
+  width: 100px;
+  height: 150px;
+  background: radial-gradient(circle, #f5f5dc 60%, #d2b48c 100%);
+  border-radius: 50% 50% 0 0;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.candle-flame {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 30px;
+  background: radial-gradient(circle, #ffeb3b, #ff9800);
+  border-radius: 50% 50% 0 0;
+  animation: flicker 1.5s infinite alternate;
+}
+
+.menu-btn {
+  position: relative;
+  z-index: 3;
+  background-color: #d7ccc8;
+  padding: 15px 40px;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  margin-top: 150px; /* Moves button lower, adjust as needed */
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+  background-color: #c7b8b2;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+  100% { transform: translateX(-50%) scale(1); }
+}

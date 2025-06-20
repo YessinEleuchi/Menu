@@ -1,0 +1,13 @@
+<div class="categories-container">
+  <div class="overlay">
+    <h2 class="title">Catégories</h2>
+    <div class="grid">
+      <div class="card" *ngFor="let cat of categories" (click)="goToSub(cat.name)">
+        <img [src]="cat.imageUrl" alt="{{ cat.name }}" class="card-image">
+        <div class="card-content">
+          <p class="card-title">{{ cat.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
